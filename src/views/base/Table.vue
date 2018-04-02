@@ -1,8 +1,8 @@
 <template>
   <b-card :header="caption">
     <b-table :hover="hover" :striped="striped" :bordered="bordered" :small="small" :fixed="fixed" responsive="sm" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage">
-      <template slot="status" slot-scope="data">
-        <b-badge :variant="getBadge(data.item.status)">{{data.item.status}}</b-badge>
+      <template slot="代理状态" slot-scope="data">
+        <b-badge :variant="getBadge(data.item.代理状态)">{{data.item.代理状态}}</b-badge>
       </template>
     </b-table>
     <nav>
@@ -57,37 +57,37 @@
     data: () => {
       return {
         items: shuffleArray([
-          {username: 'Samppa Nori', registered: '2012/01/01', role: 'Member', status: 'Active'},
-          {username: 'Estavan Lykos', registered: '2012/02/01', role: 'Staff', status: 'Banned'},
-          {username: 'Chetan Mohamed', registered: '2012/02/01', role: 'Admin', status: 'Inactive'},
-          {username: 'Derick Maximinus', registered: '2012/03/01', role: 'Member', status: 'Pending'},
-          {username: 'Friderik Dávid', registered: '2012/01/21', role: 'Staff', status: 'Active'},
-          {username: 'Yiorgos Avraamu', registered: '2012/01/01', role: 'Member', status: 'Active'},
-          {username: 'Avram Tarasios', registered: '2012/02/01', role: 'Staff', status: 'Banned'},
-          {username: 'Quintin Ed', registered: '2012/02/01', role: 'Admin', status: 'Inactive'},
-          {username: 'Enéas Kwadwo', registered: '2012/03/01', role: 'Member', status: 'Pending'},
-          {username: 'Agapetus Tadeáš', registered: '2012/01/21', role: 'Staff', status: 'Active'},
-          {username: 'Carwyn Fachtna', registered: '2012/01/01', role: 'Member', status: 'Active'},
-          {username: 'Nehemiah Tatius', registered: '2012/02/01', role: 'Staff', status: 'Banned'},
-          {username: 'Ebbe Gemariah', registered: '2012/02/01', role: 'Admin', status: 'Inactive'},
-          {username: 'Eustorgios Amulius', registered: '2012/03/01', role: 'Member', status: 'Pending'},
-          {username: 'Leopold Gáspár', registered: '2012/01/21', role: 'Staff', status: 'Active'},
-          {username: 'Pompeius René', registered: '2012/01/01', role: 'Member', status: 'Active'},
-          {username: 'Paĉjo Jadon', registered: '2012/02/01', role: 'Staff', status: 'Banned'},
-          {username: 'Micheal Mercurius', registered: '2012/02/01', role: 'Admin', status: 'Inactive'},
-          {username: 'Ganesha Dubhghall', registered: '2012/03/01', role: 'Member', status: 'Pending'},
-          {username: 'Hiroto Šimun', registered: '2012/01/21', role: 'Staff', status: 'Active'},
-          {username: 'Vishnu Serghei', registered: '2012/01/01', role: 'Member', status: 'Active'},
-          {username: 'Zbyněk Phoibos', registered: '2012/02/01', role: 'Staff', status: 'Banned'},
-          {username: 'Einar Randall', registered: '2012/02/01', role: 'Admin', status: 'Inactive'},
-          {username: 'Félix Troels', registered: '2012/03/21', role: 'Staff', status: 'Active'},
-          {username: 'Aulus Agmundr', registered: '2012/01/01', role: 'Member', status: 'Pending'}
+          {IP地址: '192.108.93.21', 添加时间: '2012/01/01', 代理状态: 'Active'},
+          {IP地址: '192.108.93.121', 添加时间: '2012/02/01', 代理状态: 'Banned'},
+          {IP地址: '10.29.97.82', 添加时间: '2012/02/01', 代理状态: 'Inactive'},
+          {IP地址: 'Derick Maximinus', 添加时间: '2012/03/01', 代理状态: 'Pending'},
+          {IP地址: 'Friderik Dávid', 添加时间: '2012/01/21', 代理状态: 'Active'},
+          {IP地址: 'Yiorgos Avraamu', 添加时间: '2012/01/01', 代理状态: 'Active'},
+          {IP地址: 'Avram Tarasios', 添加时间: '2012/02/01', 代理状态: 'Banned'},
+          {IP地址: 'Quintin Ed', 添加时间: '2012/02/01', 代理状态: 'Inactive'},
+          {IP地址: 'Enéas Kwadwo', 添加时间: '2012/03/01', 代理状态: 'Pending'},
+          {IP地址: 'Agapetus Tadeáš', 添加时间: '2012/01/21', 代理状态: 'Active'},
+          {IP地址: 'Carwyn Fachtna', 添加时间: '2012/01/01', 代理状态: 'Active'},
+          {IP地址: 'Nehemiah Tatius', 添加时间: '2012/02/01', 代理状态: 'Banned'},
+          {IP地址: 'Ebbe Gemariah', 添加时间: '2012/02/01', 代理状态: 'Inactive'},
+          {IP地址: 'Eustorgios Amulius', 添加时间: '2012/03/01', 代理状态: 'Pending'},
+          {IP地址: 'Leopold Gáspár', 添加时间: '2012/01/21', 代理状态: 'Active'},
+          {IP地址: 'Pompeius René', 添加时间: '2012/01/01', 代理状态: 'Active'},
+          {IP地址: 'Paĉjo Jadon', 添加时间: '2012/02/01', 代理状态: 'Banned'},
+          {IP地址: 'Micheal Mercurius', 添加时间: '2012/02/01', 代理状态: 'Inactive'},
+          {IP地址: 'Ganesha Dubhghall', 添加时间: '2012/03/01', 代理状态: 'Pending'},
+          {IP地址: 'Hiroto Šimun', 添加时间: '2012/01/21', 代理状态: 'Active'},
+          {IP地址: 'Vishnu Serghei', 添加时间: '2012/01/01', 代理状态: 'Active'},
+          {IP地址: 'Zbyněk Phoibos', 添加时间: '2012/02/01', 代理状态: 'Banned'},
+          {IP地址: 'Einar Randall', 添加时间: '2012/02/01', 代理状态: 'Inactive'},
+          {IP地址: 'Félix Troels', 添加时间: '2012/03/21', 代理状态: 'Active'},
+          {IP地址: 'Aulus Agmundr', 添加时间: '2012/01/01', 代理状态: 'Pending'}
         ]),
         fields: [
-          {key: 'username'},
-          {key: 'registered'},
-          {key: 'role'},
-          {key: 'status'}
+          {key: 'IP地址'},
+          {key: '添加时间'},
+          {key: '代理状态'},
+          {key: '操作'}
         ],
         currentPage: 1,
         perPage: 5,
@@ -95,11 +95,11 @@
       }
     },
     methods: {
-      getBadge (status) {
-        return status === 'Active' ? 'success'
-          : status === 'Inactive' ? 'secondary'
-            : status === 'Pending' ? 'warning'
-              : status === 'Banned' ? 'danger' : 'primary'
+      getBadge (代理状态) {
+        return 代理状态 === 'Active' ? 'success'
+          : 代理状态 === 'Inactive' ? 'secondary'
+            : 代理状态 === 'Pending' ? 'warning'
+              : 代理状态 === 'Banned' ? 'danger' : 'primary'
       },
       getRowCount (items) {
         return items.length

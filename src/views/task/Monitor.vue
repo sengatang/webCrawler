@@ -2,7 +2,7 @@
    <div class="animated fadeIn">
     <b-row>
       <b-col md="12">
-        <b-card header="Traffic &amp; Sales">
+        <b-card header="所有任务概览">
           <b-row>
             <b-col sm="12" lg="4">
               <b-row>
@@ -276,7 +276,7 @@
             </b-col>
           </b-row>
           <br/>
-                    <b-table class="mb-0 table-outline" responsive="sm" hover :items="tableItems" :fields="tableFields" head-variant="light">
+          <b-table class="mb-0 table-outline" responsive="sm" hover :items="tableItems" :fields="tableFields" head-variant="light">
             <div slot="avatar" class="avatar" slot-scope="item">
               <img :src="item.value.url" class="img-avatar" alt="">
               <span class="avatar-status" v-bind:class="{ 'bg-success': item.value.status == 'success',  'bg-warning': item.value.status == 'warning', 'bg-danger': item.value.status == 'danger', 'bg-secondary': item.value.status == '' }"></span>
@@ -372,22 +372,14 @@ export default {
       ],
       tableFields: {
         avatar: {
-          label: '<i class="icon-people"></i>',
+          label: '<i class="icon-cursor"></i>',
           class: 'text-center'
         },
         user: {
-          label: 'User'
-        },
-        country: {
-          label: 'Country',
-          class: 'text-center'
+          label: 'Task'
         },
         usage: {
           label: 'Usage'
-        },
-        payment: {
-          label: 'Payment method',
-          class: 'text-center'
         },
         activity: {
           label: 'Activity'

@@ -8,6 +8,7 @@ import Full from '@/containers/Full'
 import Dashboard from '@/views/Dashboard'
 import Monitor from '@/views/task/Monitor'
 import NewTask from '@/views/task/NewTask'
+import Task from '@/views/task/Task'
 
 // Views - Components
 import Current from '@/views/proxy/Current'
@@ -26,7 +27,6 @@ import Login from '@/views/pages/Login'
 import Register from '@/views/pages/Register'
 
 Vue.use(Router)
-
 export default new Router({
   mode: 'hash', // Demo is living in GitHub.io, so required!
   linkActiveClass: 'open active',
@@ -60,6 +60,11 @@ export default new Router({
               path: 'newtask',
               name: 'NewTask',
               component: NewTask
+            },
+            {
+              path: 'current',
+              name: 'Task',
+              component: Task
             }
           ]
         },
