@@ -3,15 +3,14 @@
       <b-col md="12">
         <b-card>
           <div slot="header">
-            <strong>Basic Form</strong> Elements
+            <strong>新增</strong> 任务
           </div>
           <b-form-group
-            description="Let us know your desired URL."
-            label="Enter URL"
+            label="请输入待爬取的URL"
             label-for="URL"
             :label-cols="3"
             :horizontal="true">
-            <b-form-input id="URL" type="text"></b-form-input>
+            <b-form-input id="URL" type="text" placeholder="请输入待爬取的URL"></b-form-input>
           </b-form-group>
           <!-- <b-row>
             <b-col sm="4">
@@ -42,20 +41,23 @@
                 </b-form-group>
             </b-col>
           </b-row> -->
-          <b-form-group
-            label="ChooseTime"
+          <!-- <b-form-group
+            label="请选择每天爬取次数"
             label-for="basicInlineCheckboxes"
             :label-cols="3"
             :horizontal="true">
-            <b-form-checkbox-group id="basicInlineCheckboxes" name="InlineCheckboxes" :plain="true" :checked="[1]">
-              <b-form-checkbox :plain="true" value="1">0:00 - 6:00</b-form-checkbox>
-              <b-form-checkbox :plain="true" value="2">6:00 - 12:00</b-form-checkbox>
-              <b-form-checkbox :plain="true" value="3">12:00 - 18:00</b-form-checkbox>
-              <b-form-checkbox :plain="true" value="4">18:00 - 24:00</b-form-checkbox>
-            </b-form-checkbox-group>
+            <vue-timepicker></vue-timepicker>
+          </b-form-group>
+           -->
+          <b-form-group
+            label="请选择时间"
+            label-for="basicInlineCheckboxes"
+            :label-cols="3"
+            :horizontal="true">
+            <vue-timepicker></vue-timepicker>
           </b-form-group>
           <b-form-group
-            label="ChooseDay"
+            label="请选择需要爬取的天数"
             label-for="dayCheckboxes"
             :label-cols="3"
             :horizontal="true">
@@ -71,7 +73,24 @@
           </b-form-group>
 
           <b-form-group
-            label="Tag"
+            description="开始时间"
+            label="请选择任务开始时间"
+            label-for="task_start_time"
+            :label-cols="3"
+            :horizontal="true">
+            <datepicker id="task_start_time"></datepicker>
+          </b-form-group>
+          <b-form-group
+            description="结束时间"
+            label="请选择任务结束时间"
+            label-for="task_end_time"
+            :label-cols="3"
+            :horizontal="true">
+            <datepicker id="task_end_time"></datepicker>
+          </b-form-group>
+          
+          <b-form-group
+            label="任务名称"
             label-for="basicTextarea"
             :label-cols="3"
             :horizontal="true">
@@ -85,26 +104,21 @@
               <b-form-file id="fileInput" :plain="true"></b-form-file>
           </b-form-group>
           <div slot="footer">
-            <b-button type="submit" size="sm" variant="primary"><i class="fa fa-dot-circle-o"></i> Submit</b-button>
-            <b-button type="reset" size="sm" variant="danger"><i class="fa fa-ban"></i> Reset</b-button>
-          </div>
-        </b-card>
-        <b-card>
-          <div slot="header">
-            <strong>任务</strong> 责任人
-          </div>
-          <!-- Bootstrap Vue has some problems with Inline forms that's why we use some standard bootstrap classes -->
-          <b-form inline>
-            <label class="mr-sm-2" for="inlineInput1">Name: </label>
-            <b-input id="inlineInput1" type="text" placeholder="Jane Doe"></b-input>
-            <label class="mx-sm-2" for="inlineInput2">Email: </label>
-            <b-input id="inlineInput2" type="email" placeholder="jane.doe@example.com"></b-input>
-          </b-form>
-          <div slot="footer">
-            <b-button type="submit" size="sm" variant="primary"><i class="fa fa-dot-circle-o"></i> Submit</b-button>
-            <b-button type="reset" size="sm" variant="danger"><i class="fa fa-ban"></i> Reset</b-button>
+            <b-button type="submit" size="sm" variant="primary"><i class="fa fa-dot-circle-o"></i> 提交任务申请</b-button>
+            <b-button type="reset" size="sm" variant="danger"><i class="fa fa-ban"></i> 重置</b-button>
           </div>
         </b-card>
       </b-col>
     </b-row>
 </template>
+
+<script>
+import VueTimepicker from 'vue2-timepicker'
+import Datepicker from 'vuejs-datepicker'
+
+export default {
+  name: 'Newtask',
+  components: { VueTimepicker,
+    Datepicker }
+}
+</script>
