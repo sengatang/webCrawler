@@ -9,6 +9,7 @@ import Dashboard from '@/views/Dashboard'
 import Monitor from '@/views/task/Monitor'
 import NewTask from '@/views/task/NewTask'
 import Task from '@/views/task/Task'
+import PreviousTask from '@/views/task/PreviousTask'
 
 // Views - Components
 import Current from '@/views/proxy/Current'
@@ -65,6 +66,11 @@ export default new Router({
               path: 'current',
               name: 'Task',
               component: Task
+            },
+            {
+              path: 'previous',
+              name: 'Previous',
+              component: PreviousTask
             }
           ]
         },

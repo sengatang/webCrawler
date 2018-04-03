@@ -35,8 +35,8 @@ export default {
     },
     {
       name: '历史任务',
-      url: '/task/newtask',
-      icon: 'icon-pencil'
+      url: '/task/previous',
+      icon: 'icon-notebook'
     },
     {
       title: true,

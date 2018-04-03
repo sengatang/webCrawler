@@ -54,7 +54,13 @@
             label-for="basicInlineCheckboxes"
             :label-cols="3"
             :horizontal="true">
-            <vue-timepicker></vue-timepicker>
+              <el-time-picker
+                v-model="value2"
+                :picker-options="{
+                  selectableRange: '00:00:00 - 23:59:59'
+                }"
+                placeholder="任意时间点">
+              </el-time-picker>
           </b-form-group>
           <b-form-group
             label="请选择需要爬取的天数"
@@ -73,20 +79,26 @@
           </b-form-group>
 
           <b-form-group
-            description="开始时间"
             label="请选择任务开始时间"
             label-for="task_start_time"
             :label-cols="3"
             :horizontal="true">
-            <datepicker id="task_start_time"></datepicker>
+                <el-date-picker
+                  v-model="value1"
+                  type="date"
+                  placeholder="任务开始日期">
+                </el-date-picker>
           </b-form-group>
           <b-form-group
-            description="结束时间"
             label="请选择任务结束时间"
             label-for="task_end_time"
             :label-cols="3"
             :horizontal="true">
-            <datepicker id="task_end_time"></datepicker>
+                <el-date-picker
+                v-model="value1"
+                type="date"
+                placeholder="任务结束日期">
+              </el-date-picker>
           </b-form-group>
           
           <b-form-group
@@ -113,12 +125,12 @@
 </template>
 
 <script>
-import VueTimepicker from 'vue2-timepicker'
-import Datepicker from 'vuejs-datepicker'
-
-export default {
-  name: 'Newtask',
-  components: { VueTimepicker,
-    Datepicker }
-}
+  export default {
+    data () {
+      return {
+        value2: new Date(2016, 9, 10, 18, 40),
+        value3: new Date(2016, 9, 10, 18, 40)
+      }
+    }
+  }
 </script>

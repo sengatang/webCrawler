@@ -1,12 +1,10 @@
 <template>
-  <vue-timepicker></vue-timepicker>
+  <div class="block">
+    <span class="demonstration">默认</span>
+    <el-date-picker
+      v-model="value1"
+      type="date"
+      placeholder="选择日期">
+    </el-date-picker>
+  </div>
 </template>
-
-<script>
-import VueTimepicker from 'vue2-timepicker'
-
-export default {
-  name: 'Playground',
-  components: { VueTimepicker }
-}
-</script>
