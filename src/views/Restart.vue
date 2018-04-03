@@ -23,4 +23,3 @@
     </div>
 </template>
   
-</template>
