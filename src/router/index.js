@@ -18,6 +18,7 @@ import AddProxy from '@/views/proxy/AddProxy'
 // Views - Buttons
 import Settings from '@/views/Settings'
 
+// import Restart from '@/views/Restart'
 // Views - Notifications
 import Modals from '@/views/notifications/Modals'
 
@@ -106,6 +107,11 @@ export default new Router({
         }
       ]
     },
+    // {
+    //   path: 'restart',
+    //   name: 'Restart',
+    //   component: Restart
+    // },
     {
       path: '/pages',
       redirect: '/pages/404',

@@ -4,6 +4,15 @@
       <template slot="代理状态" slot-scope="data">
         <b-badge :variant="getBadge(data.item.代理状态)">{{data.item.代理状态}}</b-badge>
       </template>
+      <template slot-scope="scope" slot="操作">
+          <el-button
+            size="mini"
+            @click="handleEdit(scope.$index, scope.row)">启/禁用</el-button>
+          <el-button
+            size="mini"
+            type="danger"
+            @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+      </template>
     </b-table>
     <nav>
       <b-pagination :total-rows="getRowCount(items)" :per-page="perPage" v-model="currentPage" prev-text="Prev" next-text="Next" hide-goto-end-buttons/>

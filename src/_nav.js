@@ -85,7 +85,7 @@ export default {
     },
     {
       name: '重启爬虫',
-      url: '/my-account',
+      url: '/restart',
       icon: 'icon-user'
     }
   ]

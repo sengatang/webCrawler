@@ -2,14 +2,14 @@
    <div class="animated fadeIn">
     <b-row>
       <b-col md="12">
-        <b-card header="所有任务概览">
+        <b-card header="当前活跃任务">
           <b-row>
             <b-col sm="12" lg="4">
               <b-row>
                 <b-col sm="6">
                   <Callout variant="info">
-                    <small class="text-muted">New Clients</small><br>
-                    <strong class="h4">9,123</strong>
+                    <small class="text-muted">总爬虫数</small><br>
+                    <strong class="h4">123</strong>
                     <div class="chart-wrapper">
                       <callout-chart-example :data="[35, 23, 56, 22, 97, 23, 64]" variant="#20a8d8" width="80" height="30" />
                     </div>
@@ -17,8 +17,8 @@
                 </b-col>
                 <b-col sm="6">
                   <Callout variant="danger">
-                    <small class="text-muted">Recurring Clients</small><br>
-                    <strong class="h4">22,643</strong>
+                    <small class="text-muted">当前活跃爬虫</small><br>
+                    <strong class="h4">43</strong>
                     <div class="chart-wrapper">
                       <callout-chart-example :data="[65, 59, 84, 84, 51, 55, 40]" variant="#f86c6b" width="80" height="30" />
                     </div>
@@ -99,7 +99,7 @@
               <b-row>
                 <b-col sm="6">
                   <Callout variant="warning">
-                    <small class="text-muted">Pageviews</small><br>
+                    <small class="text-muted">爬取url总数</small><br>
                     <strong class="h4">78,623</strong>
                     <div class="chart-wrapper">
                       <callout-chart-example :data="[35, 23, 56, 22, 97, 23, 64]" variant="#f8cb00" width="80" height="30" />
@@ -107,53 +107,16 @@
                   </Callout>
                 </b-col>
                 <b-col sm="6">
-                  <Callout variant="success">
-                    <small class="text-muted">Organic</small><br>
-                    <strong class="h4">49,123</strong>
-                    <div class="chart-wrapper">
-                      <callout-chart-example :data="[65, 59, 84, 84, 51, 55, 40]" variant="#4dbd74" width="80px" height="30" />
-                    </div>
-                  </Callout>
                 </b-col>
               </b-row>
               <hr class="mt-0">
-              <ul class="horizontal-bars type-2">
-                <li>
-                  <i class="icon-user"></i>
-                  <span class="title">Male</span>
-                  <span class="value">43%</span>
-                  <div class="bars">
-                    <b-progress height={} class="progress-xs" :value="43" variant="warning"></b-progress>
-                  </div>
-                </li>
-                <li>
-                  <i class="icon-user-female"></i>
-                  <span class="title">Female</span>
-                  <span class="value">37%</span>
-                  <div class="bars">
-                    <b-progress height={} class="progress-xs" :value="37" variant="warning"></b-progress>
-                  </div>
-                </li>
-                <li class="divider"></li>
-                <li>
-                  <i class="icon-globe"></i>
-                  <span class="title">Organic Search</span>
-                  <span class="value">191,235 <span class="text-muted small">(56%)</span></span>
-                  <div class="bars">
-                    <b-progress height={} class="progress-xs" :value="56" variant="success"></b-progress>
-                  </div>
-                </li>
-                <li class="divider text-center">
-                  <b-button variant="link" size="sm" class="text-muted"><i class="icon-options"></i></b-button>
-                </li>
-              </ul>
             </b-col>
             <b-col sm="6" lg="4">
               <b-row>
                 <b-col sm="6">
                   <Callout>
-                    <small class="text-muted">CTR</small><br>
-                    <strong class="h4">23%</strong>
+                    <small class="text-muted">爬虫使用率</small><br>
+                    <strong class="h4">35%</strong>
                     <div class="chart-wrapper">
                       <callout-chart-example :data="[78, 81, 80, 45, 34, 12, 40]" width="80px" height="30" />
                     </div>
@@ -170,114 +133,11 @@
                 </b-col>
               </b-row>
               <hr class="mt-0">
-              <ul class="icons-list">
-                <li>
-                  <i class="icon-screen-desktop bg-primary"></i>
-                  <div class="desc">
-                    <div class="title">iMac 4k</div>
-                    <small>Lorem ipsum dolor sit amet</small>
-                  </div>
-                  <div class="value">
-                    <div class="small text-muted">Sold this week</div>
-                    <strong>1.924</strong>
-                  </div>
-                  <div class="actions">
-                    <b-button variant="link" class="text-muted"><i class="icon-settings"></i></b-button>
-                  </div>
-                </li>
-                <li>
-                  <i class="icon-screen-smartphone bg-info"></i>
-                  <div class="desc">
-                    <div class="title">Samsung Galaxy Edge</div>
-                    <small>Lorem ipsum dolor sit amet</small>
-                  </div>
-                  <div class="value">
-                    <div class="small text-muted">Sold this week</div>
-                    <strong>1.224</strong>
-                  </div>
-                  <div class="actions">
-                    <b-button variant="link" class="text-muted"><i class="icon-settings"></i></b-button>
-                  </div>
-                </li>
-                <li>
-                  <i class="icon-screen-smartphone bg-warning"></i>
-                  <div class="desc">
-                    <div class="title">iPhone 6S</div>
-                    <small>Lorem ipsum dolor sit amet</small>
-                  </div>
-                  <div class="value">
-                    <div class="small text-muted">Sold this week</div>
-                    <strong>1.163</strong>
-                  </div>
-                  <div class="actions">
-                    <b-button variant="link" class="text-muted"><i class="icon-settings"></i></b-button>
-                  </div>
-                </li>
-                <li>
-                  <i class="icon-user bg-danger"></i>
-                  <div class="desc">
-                    <div class="title">Premium accounts</div>
-                    <small>Lorem ipsum dolor sit amet</small>
-                  </div>
-                  <div class="value">
-                    <div class="small text-muted">Sold this week</div>
-                    <strong>928</strong>
-                  </div>
-                  <div class="actions">
-                    <b-button variant="link" class="text-muted"><i class="icon-settings"></i></b-button>
-                  </div>
-                </li>
-                <li>
-                  <i class="icon-social-spotify bg-success"></i>
-                  <div class="desc">
-                    <div class="title">Spotify Subscriptions</div>
-                    <small>Lorem ipsum dolor sit amet</small>
-                  </div>
-                  <div class="value">
-                    <div class="small text-muted">Sold this week</div>
-                    <strong>893</strong>
-                  </div>
-                  <div class="actions">
-                    <b-button variant="link" class="text-muted"><i class="icon-settings"></i></b-button>
-                  </div>
-                </li>
-                <li>
-                  <i class="icon-cloud-download bg-danger"></i>
-                  <div class="desc">
-                    <div class="title">Ebook</div>
-                    <small>Lorem ipsum dolor sit amet</small>
-                  </div>
-                  <div class="value">
-                    <div class="small text-muted">Downloads</div>
-                    <strong>121.924</strong>
-                  </div>
-                  <div class="actions">
-                    <b-button variant="link" class="text-muted"><i class="icon-settings"></i></b-button>
-                  </div>
-                </li>
-                <li>
-                  <i class="icon-camera bg-warning"></i>
-                  <div class="desc">
-                    <div class="title">Photos</div>
-                    <small>Lorem ipsum dolor sit amet</small>
-                  </div>
-                  <div class="value">
-                    <div class="small text-muted">Uploaded</div>
-                    <strong>12.125</strong>
-                  </div>
-                  <div class="actions">
-                    <b-button variant="link" class="text-muted"><i class="icon-settings"></i></b-button>
-                  </div>
-                </li>
-                <li class="divider text-center">
-                  <b-button size="sm" variant="link" class="text-muted"><i class="icon-options"></i></b-button>
-                </li>
-              </ul>
             </b-col>
           </b-row>
           <br/>
-          <b-table class="mb-0 table-outline" responsive="sm" hover :items="tableItems" :fields="tableFields" head-variant="light">
-            <div slot="avatar" class="avatar" slot-scope="item">
+          <b-table class="mb-0 table-outline" responsive="sm" hover :items="tableItems" :fields="tableFields" head-variant="light" @click="open">
+            <div slot="avatar" class="avatar" slot-scope="item" >
               <img :src="item.value.url" class="img-avatar" alt="">
               <span class="avatar-status" v-bind:class="{ 'bg-success': item.value.status == 'success',  'bg-warning': item.value.status == 'warning', 'bg-danger': item.value.status == 'danger', 'bg-secondary': item.value.status == '' }"></span>
             </div>
@@ -287,7 +147,7 @@
                 <span>
                   <template v-if="item.value.new">New</template>
                   <template v-else>Recurring</template>
-                </span> | Registered: {{item.value.registered}}
+                </span> | 任务开始时间: {{item.value.registered}}
               </div>
             </div>
             <i slot="country" class="h4 mb-0" :class="flag(item.value.flag)" slot-scope="item" :title="item.value.flag" :id="item.value.flag"></i>
@@ -307,6 +167,13 @@
             <div slot="activity" slot-scope="item">
               <div class="small text-muted">Last login</div>
               <strong>{{item.value}}</strong>
+            </div>
+            <div slot="option">
+              <template slot-scope="scope">
+                <el-button
+                    size="mini"
+                    @click="open()">导出配置文件</el-button>
+              </template>
             </div>
           </b-table>
         </b-card>
@@ -371,18 +238,17 @@ export default {
         }
       ],
       tableFields: {
-        avatar: {
-          label: '<i class="icon-cursor"></i>',
-          class: 'text-center'
-        },
         user: {
-          label: 'Task'
+          label: '任务名称'
         },
         usage: {
-          label: 'Usage'
+          label: '任务进度'
         },
         activity: {
-          label: 'Activity'
+          label: '上次活跃时间'
+        },
+        option: {
+          label: '查看详情'
         }
       }
     }
@@ -403,6 +269,17 @@ export default {
     },
     flag (value) {
       return 'flag-icon flag-icon-' + value
+    },
+    open () {
+      this.$alert('这是一段内容', '标题名称', {
+        confirmButtonText: '确定',
+        callback: action => {
+          this.$message({
+            type: 'info',
+            message: `action: ${action}`
+          })
+        }
+      })
     }
   }
 }
